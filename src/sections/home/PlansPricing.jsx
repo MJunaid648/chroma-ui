@@ -1,5 +1,7 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import React from "react";
+import HandCoins from "/HandCoins.svg";
+import frame from "/Frame.svg";
 
 const PlansPricing = () => {
   const cardData = [
@@ -43,85 +45,82 @@ const PlansPricing = () => {
       <div className="h-full plnasWrapper bg-[#E9F3FD] pb-[100px]">
         <div className="inner w-[80%] mx-auto pt-[100px] flex flex-col items-center gap-5">
           <div className="py-2 px-3 rounded-2xl bg-[white]">
-            <button className="text-[#29145b] text-[12px] font-semibold">
+            <button className="text-[#29145b] text-[12px] font-semibold flex gap-2 items-center">
+              <img src={HandCoins} alt="" />
               Transparent Pricing
             </button>
           </div>
 
-          <h2 className="font-bold text-[#29145b] text-[48px]">
-            Plans And Pricing
-          </h2>
-          <div className="pricingCardContainer flex gap-7 ">
-          {
-            cardData.map((data)=>(
-                <div className="priceCard w-[281px] py-[16px] px-[14px] rounded-xl flex flex-col gap-4 items-start bg-[white]">
-              <div className="flex flex-col" key={data.id}>
-                <h5 className="text-[24px] font-bold">{data.title}</h5>
-                <p className="text-[14px] font-bold">
-                 {data.description}
-                </p>
+          <h2 className="h2">Plans And Pricing</h2>
+          <div className="pricingCardContainer flex md:flex-row flex-col gap-7 ">
+            {cardData.map((data) => (
+              <div className="priceCard w-[281px] py-[16px] px-[14px] rounded-xl flex flex-col gap-4 items-start bg-[white]">
+                <div className="flex flex-col" key={data.id}>
+                  <h5 className="text-[24px] font-bold">{data.title}</h5>
+                  <p className="text-[14px] font-bold">{data.description}</p>
+                </div>
+
+                <div className="flex flex-col">
+                  <p className="text-[28px] font-bold">{data.price}</p>
+                  <p className="text-[14px] font-semibold">{data.duration}</p>
+                </div>
+
+                <button className="w-full p-3 flex font-bold items-center justify-center border-[1px] border-[#E4DDF6] border-solid rounded-xl">
+                  Get Started
+                </button>
+            
+                <hr />
+                <img src={frame} className="w-auto md:hidden" alt="" />
+                <hr />
+                
+                <div className="textContainer flex flex-col items-start gap-3">
+                  <p className="font-medium text-[gray]">What's included</p>
+                  <ul className="flex flex-col gap-3">
+                    <li className="flex gap-2 justify-start text-[14px] font-semibold">
+                      <Icon
+                        icon="mdi:tick"
+                        width="18px"
+                        height="18px"
+                        style={{ color: "#29145b" }}
+                      />
+                      {data.list1Text}
+                    </li>
+
+                    <li className="flex gap-2 justify-start text-[14px] font-semibold">
+                      <Icon
+                        icon="mdi:tick"
+                        width="18px"
+                        height="18px"
+                        style={{ color: "#29145b" }}
+                      />
+                      {data.list2Text}
+                    </li>
+                    {data.list3Text && (
+                      <li className="flex gap-2 justify-start text-[14px] font-semibold">
+                        <Icon
+                          icon="mdi:tick"
+                          width="18px"
+                          height="18px"
+                          style={{ color: "#29145b" }}
+                        />
+                        {data.list3Text}
+                      </li>
+                    )}
+                    {data.list4Text && (
+                      <li className="flex gap-2 justify-start text-[14px] font-semibold">
+                        <Icon
+                          icon="mdi:tick"
+                          width="18px"
+                          height="18px"
+                          style={{ color: "#29145b" }}
+                        />
+                        {data.list4Text}
+                      </li>
+                    )}
+                  </ul>
+                </div>
               </div>
-
-              <div className="flex flex-col">
-                <p className="text-[28px] font-bold">{data.price}</p>
-                <p className="text-[14px] font-semibold">{data.duration}</p>
-              </div>
-
-              <button className="w-full p-3 flex font-bold items-center justify-center border-[1px] border-[#E4DDF6] border-solid rounded-xl">
-                Get Started
-              </button>
-              <hr />
-              <div className="textContainer flex flex-col items-start gap-3">
-                <p className="font-medium text-[gray]">What's included</p>
-                <ul className="flex flex-col gap-3">
-                  <li className="flex gap-2 justify-start text-[14px] font-semibold">
-                    <Icon
-                      icon="mdi:tick"
-                      width="18px"
-                      height="18px"
-                      style={{ color: "#29145b" }}
-                    />
-                 {data.list1Text}
-                  </li>
-
-                  <li className="flex gap-2 justify-start text-[14px] font-semibold">
-                    <Icon
-                      icon="mdi:tick"
-                      width="18px"
-                      height="18px"
-                      style={{ color: "#29145b" }}
-                    />
-                 {data.list2Text}
-                  </li>
-                  {data.list3Text && (
-  <li className="flex gap-2 justify-start text-[14px] font-semibold">
-    <Icon
-      icon="mdi:tick"
-      width="18px"
-      height="18px"
-      style={{ color: "#29145b" }}
-    />
-    {data.list3Text}
-  </li>
-)}
-{data.list4Text && (
-  <li className="flex gap-2 justify-start text-[14px] font-semibold">
-    <Icon
-      icon="mdi:tick"
-      width="18px"
-      height="18px"
-      style={{ color: "#29145b" }}
-    />
-    {data.list4Text}
-  </li>
-)}
-
-                </ul>
-              </div>
-            </div>
-            ))
-          }
-           
+            ))}
           </div>
         </div>
       </div>
