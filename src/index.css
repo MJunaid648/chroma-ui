@@ -65,8 +65,8 @@
   .h2 {
     @apply text-[28px] md:text-[48px];
   }
-  .card-h{
-    @apply text-[18px] text-[24px] font-[700]
+  .card-h {
+    @apply text-[18px] text-[24px] font-[700];
   }
 }
 
@@ -92,4 +92,10 @@ code {
 
 .chroma-button div div:hover {
   background: linear-gradient(0deg, #36108b 100%, #29145b 0%) !important;
+}
+
+.video-sec {
+  background-image: url("./assets/Rectangle.svg");
+  background-position-x: center;
+  background-size: cover;
 }

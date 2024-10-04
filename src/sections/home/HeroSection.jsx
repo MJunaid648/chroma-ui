@@ -57,7 +57,7 @@ function HeroSection() {
           Get started for free
         </TextButton>
         <HomeImages className="mt-[4rem] lg:mt-[8rem]" />
-        <HomeSection2 />
+        
       </div>
     </div>
   );
