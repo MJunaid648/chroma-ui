@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Manrope-Bold"; /* The name of the custom font */
+  src: url("./assets/fonts/Manrope-Bold.ttf") format("truetype"); /* Path to your .ttf file */
+}
+
+@font-face {
+  font-family: "Manrope-ExtraBold"; /* The name of the custom font */
+  src: url("./assets/fonts/Manrope-ExtraBold.ttf") format("truetype"); /* Path to your .ttf file */
+}
+
+@font-face {
+  font-family: "Manrope-ExtraLight"; /* The name of the custom font */
+  src: url("./assets/fonts/Manrope-ExtraLight.ttf") format("truetype"); /* Path to your .ttf file */
+}
+
+@font-face {
+  font-family: "Manrope-Light"; /* The name of the custom font */
+  src: url("./assets/fonts/Manrope-Light.ttf") format("truetype"); /* Path to your .ttf file */
+}
+
+@font-face {
+  font-family: "Manrope-Medium"; /* The name of the custom font */
+  src: url("./assets/fonts/Manrope-Medium.ttf") format("truetype"); /* Path to your .ttf file */
+}
+
+@font-face {
+  font-family: "Manrope-Regular"; /* The name of the custom font */
+  src: url("./assets/fonts/Manrope-Regular.ttf") format("truetype"); /* Path to your .ttf file */
+}
+
+@font-face {
+  font-family: "Manrope-SemiBold"; /* The name of the custom font */
+  src: url("./assets/fonts/Manrope-SemiBold.ttf") format("truetype"); /* Path to your .ttf file */
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+}
+
+@layer utilities {
+  .text-s {
+    @apply text-[10px] md:text-[14px];
+  }
+  .text-sb {
+    @apply text-[12px] md:text-[16px];
+  }
+  .sec-title {
+    @apply text-[12px] md:text-[14px];
+  }
+  .h1 {
+    @apply text-[36px] md:text-[72px];
+  }
+  .h2 {
+    @apply text-[28px] md:text-[48px];
+  }
+  .card-h{
+    @apply text-[18px] text-[24px] font-[700]
+  }
+}
+
+body {
+  margin: 0;
+  font-size: 14px;
+  font-family: "Manrope-Regular", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #29145b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.chroma-button:hover {
+  background: linear-gradient(0deg, #36108b 100%, #29145b 0%) !important;
+}
+
+.chroma-button div div:hover {
+  background: linear-gradient(0deg, #36108b 100%, #29145b 0%) !important;
+}
